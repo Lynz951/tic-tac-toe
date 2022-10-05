@@ -11,8 +11,10 @@
  Init: Create my states
  
  1. playerTurn: 'x' or 'o'
+  - player 1's turn? true or false
+  - player 2's turn? true or false
  
- 2. winConditions: There are 8 different combitions of 3 in a row that equal a win for a player
+ 2. winConditions: There are 8 different combitions of 3 in a row that equal a win for a player - array
     1. ['x', 'x', 'x', '', '', '', '', '', ''] - top horizontal   
     3. ['', '', '', 'x', 'x', 'x', '', '', ''] - middle horizontal
     4. ['', '', '', '', '', '', 'x', 'x', 'x'] - bottom horizontal
@@ -23,7 +25,7 @@
     9. ['', '', 'x', '', 'x', '', 'x', '', ''] - top right to bottom left diagonal
   -use indexOf boardState (ex: [0, 1, 2] equals a win 
  
- 3. boardState: This is what spaces are taken and available by both players. This can be an array.
+ 3. boardState: This is what spaces are taken and available by both players. -array
   -ex: ['', 'o', '', '', '', '', '', '', 'x']
   -both players have gone once. x starts so now it is o's turn
   -use indexes to ID each space
@@ -67,7 +69,7 @@ FUNCTION updateSpace:
    - change space from empty to filled with x or o
    - make space unclickable
 
-FUNCTION checkWinCond:
+FUNCTION checkWinConditions:
    - After space is clicked check indexOf spaces array
    - If spaces array matches any win conditions change player's turn div to say who won (player 1 or 2) (gameResult)
    - disable clickablility on all spaces (finishGame)
