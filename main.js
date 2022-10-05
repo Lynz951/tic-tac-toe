@@ -2,6 +2,7 @@ document.body.onload = init;
 
 //Variables
 
+
 //Styling for div.app
 
 //Start button
@@ -25,7 +26,11 @@ button.onclick = init;
 
 // init function
 function init() {
+    var title = document.createElement("TITLE");
+    var t = document.createTextNode("Title");
+    title.appendChild(t);
 
+    document.getElementById("app").innerHTML = "Tic-Tac-Toe";
 }
 
 //drawBoard function
