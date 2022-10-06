@@ -1,9 +1,9 @@
 //document.body.onload = init;
 
+//Variables
+
 let player = 'X';
 console.log(player);
-
-//let state = {
 
 let boardState = ['', '', '', '', '', '', '', '', ''];
 console.log(boardState);
@@ -22,27 +22,7 @@ let winConditions = [
     [2, 4, 6]
 ]
 
-
-//Variables
-
-// var title = document.createElement("h1");
-// title.id = 'winner'
-// winner.innerHTML = 'We have a winner!!'
-// document.body.appendChild(winner)
-
-// const startButton = document.getElementById("start");
 const resetButton = document.getElementById("reset");
-
-//Styling for div.app
-
-//Start button
-// startButton.type = 'button';
-// startButton.id = 'start';
-// startButton.value = 'Start';
-// startButton.className = 'btn';
-// app.appendChild(start);
-
-// startButton.onclick = drawBoard;
 
 //Reset button
 
@@ -52,10 +32,7 @@ resetButton.value = 'Reset';
 resetButton.className = 'btn';
 app.appendChild(reset);
 
-//resetButton.onclick = init;
-
 //Functions for buttons
-
 
 let x0 = document.getElementById("x0");
 x0.addEventListener("click", () => {
@@ -65,16 +42,18 @@ x0.addEventListener("click", () => {
 })
 
 function function0() {
-    console.log(player === 'X');
-    if (player === 'X') {
-    boardState.splice(0, 1, 'X');
-    x0.innerHTML = 'X';
-    playerTurn = playerTurn + 1;
-    } else if (player === 'O') {
-        boardState.splice(0, 1, 'O');
-        x0.innerHTML = 'O';
+    if (!boardState[0]) {
+        console.log(player === 'X');
+        if (player === 'X') {
+        boardState.splice(0, 1, 'X');
+        x0.innerHTML = 'X';
         playerTurn = playerTurn + 1;
-    }
+        } else if (player === 'O') {
+            boardState.splice(0, 1, 'O');
+            x0.innerHTML = 'O';
+            playerTurn = playerTurn + 1;
+        }
+    } 
 }
 
 let x1 = document.getElementById("x1");
@@ -85,16 +64,18 @@ x1.addEventListener("click", () => {
 })
 
 function function1() {
-    console.log(player === 'X');
-    if (player === 'X') {
-    boardState.splice(1, 1, 'X');
-    x1.innerHTML = 'X';
-    playerTurn = playerTurn + 1;  
-    } else if (player === 'O') {
-        boardState.splice(1, 1, 'O');
-        x1.innerHTML = 'O';
-        playerTurn = playerTurn + 1;
-    }
+    if (!boardState[1]) {
+        console.log(player === 'X');
+        if (player === 'X') {
+        boardState.splice(1, 1, 'X');
+        x1.innerHTML = 'X';
+        playerTurn = playerTurn + 1;  
+        } else if (player === 'O') {
+            boardState.splice(1, 1, 'O');
+            x1.innerHTML = 'O';
+            playerTurn = playerTurn + 1;
+        }
+    } 
 }
 
 let x2 = document.getElementById("x2");
@@ -105,16 +86,18 @@ x2.addEventListener("click", () => {
 })
 
 function function2() {
-    console.log(player === 'X');
-    if (player === 'X') {
-    boardState.splice(2, 1, 'X');
-    x2.innerHTML = 'X';
-    playerTurn = playerTurn + 1;  
-    } else if (player === 'O') {
-        boardState.splice(2, 1, 'O');
-        x2.innerHTML = 'O';
-        playerTurn = playerTurn + 1;
-    }
+    if (!boardState[2]) {
+        console.log(player === 'X');
+        if (player === 'X') {
+        boardState.splice(2, 1, 'X');
+        x2.innerHTML = 'X';
+        playerTurn = playerTurn + 1;  
+        } else if (player === 'O') {
+            boardState.splice(2, 1, 'O');
+            x2.innerHTML = 'O';
+            playerTurn = playerTurn + 1;
+        }
+    } 
 }
 
 let x3 = document.getElementById("x3");
@@ -125,15 +108,17 @@ x3.addEventListener("click", () => {
 })
 
 function function3() {
-    console.log(player === 'X');
-    if (player === 'X') {
-    boardState.splice(3, 1, 'X');
-    x3.innerHTML = 'X';
-    playerTurn = playerTurn + 1;  
-    } else if (player === 'O') {
-        boardState.splice(3, 1, 'O');
-        x3.innerHTML = 'O';
-        playerTurn = playerTurn + 1;
+    if (!boardState[3]) {
+        console.log(player === 'X');
+        if (player === 'X') {
+        boardState.splice(3, 1, 'X');
+        x3.innerHTML = 'X';
+        playerTurn = playerTurn + 1;  
+        } else if (player === 'O') {
+            boardState.splice(3, 1, 'O');
+            x3.innerHTML = 'O';
+            playerTurn = playerTurn + 1;
+        }
     }
 }
 
@@ -145,15 +130,17 @@ x4.addEventListener("click", () => {
 })
 
 function function4() {
-    console.log(player === 'X');
-    if (player === 'X') {
-    boardState.splice(4, 1, 'X');
-    x4.innerHTML = 'X';
-    playerTurn = playerTurn + 1;  
-    } else if (player === 'O') {
-        boardState.splice(4, 1, 'O');
-        x4.innerHTML = 'O';
-        playerTurn = playerTurn + 1;
+    if (!boardState[4]) {
+        console.log(player === 'X');
+        if (player === 'X') {
+        boardState.splice(4, 1, 'X');
+        x4.innerHTML = 'X';
+        playerTurn = playerTurn + 1;  
+        } else if (player === 'O') {
+            boardState.splice(4, 1, 'O');
+            x4.innerHTML = 'O';
+            playerTurn = playerTurn + 1;
+        }
     }
 }
 
@@ -165,15 +152,17 @@ x5.addEventListener("click", () => {
 })
 
 function function5() {
-    console.log(player === 'X');
-    if (player === 'X') {
-    boardState.splice(5, 1, 'X');
-    x5.innerHTML = 'X';
-    playerTurn = playerTurn + 1;  
-    } else if (player === 'O') {
-        boardState.splice(5, 1, 'O');
-        x5.innerHTML = 'O';
-        playerTurn = playerTurn + 1;
+    if (!boardState[5]) {
+        console.log(player === 'X');
+        if (player === 'X') {
+        boardState.splice(5, 1, 'X');
+        x5.innerHTML = 'X';
+        playerTurn = playerTurn + 1;  
+        } else if (player === 'O') {
+            boardState.splice(5, 1, 'O');
+            x5.innerHTML = 'O';
+            playerTurn = playerTurn + 1;
+        }
     }
 }
 
@@ -185,15 +174,17 @@ x6.addEventListener("click", () => {
 })
 
 function function6() {
-    console.log(player === 'X');
-    if (player === 'X') {
-    boardState.splice(6, 1, 'X');
-    x6.innerHTML = 'X';
-    playerTurn = playerTurn + 1;  
-    } else if (player === 'O') {
-        boardState.splice(6, 1, 'O');
-        x6.innerHTML = 'O';
-        playerTurn = playerTurn + 1;
+    if (!boardState[6]) {
+        console.log(player === 'X');
+        if (player === 'X') {
+        boardState.splice(6, 1, 'X');
+        x6.innerHTML = 'X';
+        playerTurn = playerTurn + 1;  
+        } else if (player === 'O') {
+            boardState.splice(6, 1, 'O');
+            x6.innerHTML = 'O';
+            playerTurn = playerTurn + 1;
+        }
     }
 }
 
@@ -205,15 +196,17 @@ x7.addEventListener("click", () => {
 })
 
 function function7() {
-    console.log(player === 'X');
-    if (player === 'X') {
-    boardState.splice(7, 1, 'X');
-    x7.innerHTML = 'X';
-    playerTurn = playerTurn + 1;  
-    } else if (player === 'O') {
-        boardState.splice(7, 1, 'O');
-        x7.innerHTML = 'O';
-        playerTurn = playerTurn + 1;
+    if (!boardState[7]) {
+        console.log(player === 'X');
+        if (player === 'X') {
+        boardState.splice(7, 1, 'X');
+        x7.innerHTML = 'X';
+        playerTurn = playerTurn + 1;  
+        } else if (player === 'O') {
+            boardState.splice(7, 1, 'O');
+            x7.innerHTML = 'O';
+            playerTurn = playerTurn + 1;
+        }
     }
 }
 
@@ -225,15 +218,17 @@ x8.addEventListener("click", () => {
 })
 
 function function8() {
-    console.log(player === 'X');
-    if (player === 'X') {
-    boardState.splice(8, 1, 'X');
-    x8.innerHTML = 'X';
-    playerTurn = playerTurn + 1;  
-    } else if (player === 'O') {
-        boardState.splice(8, 1, 'O');
-        x8.innerHTML = 'O';
-        playerTurn = playerTurn + 1;
+    if (!boardState[8]) {
+        console.log(player === 'X');
+        if (player === 'X') {
+        boardState.splice(8, 1, 'X');
+        x8.innerHTML = 'X';
+        playerTurn = playerTurn + 1;  
+        } else if (player === 'O') {
+            boardState.splice(8, 1, 'O');
+            x8.innerHTML = 'O';
+            playerTurn = playerTurn + 1;
+        }
     }
 }
 
@@ -271,50 +266,10 @@ function changePlayer () {
     }
 }
 
-// // init function
-// function init() {
-//     var title = document.createElement("TITLE");
-//     var t = document.createTextNode("Title");
-//     title.appendChild(t);
-
-//     document.getElementById("app").innerHTML = "Tic-Tac-Toe";
-// }
-
-// //drawBoard function - 
-// function drawBoard() {
-
-// }
-
-// //setState function
-// function setState() {
-
-// }
-
-// //handleClick function
-// function handleClick() {
-   // let space0 = createElement('div')
-
-// }
-
-// //updateSpace function
-// function updateSpace() {
-
-// }
-
-// //gameResult function
-// function gameResult() {
-
-// }
-
-// //finishGame function
-// function finishGame() {
-
-// }
-
 // //resetGame function
-// function resetGame() {
-//     //clear DOM
-//     //make all spaces clear and clickable
+ function resetGame() {
+    //clear DOM
+    //make all spaces clear and clickable
 
-// }
+ }
 
