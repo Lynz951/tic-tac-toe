@@ -192,6 +192,8 @@ function checkWinConditions() {
     && boardState[1] == boardState[2]
  ) {
     console.log('We have a winner!');
+ } else {
+    console.log('No winner yet. Keep trying!');
  }
  }
 
@@ -202,7 +204,7 @@ function changePlayer () {
         let player = 'X';
         console.log('Player 1 make your move');
     } else if (playerTurn % 2 === 0) {
-        //let player = 'O';
+        let player = 'O';
         console.log('Player 2 make your move!');
     }
 }
