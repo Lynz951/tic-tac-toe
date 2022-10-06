@@ -155,6 +155,34 @@ function function8() {
     }
 }
 
+// //checkWinConditions function
+function checkWinConditions() {
+    for (let i = 0; i < windConditions.length; i++) {
+        const line = windConditions[i];
+    if (
+    boardState[0]
+    && boardState[0] == boardState[1]
+    && boardState[1] == boardState[2]
+ ) {
+    console.log('We have a winner!');
+ } else {
+    console.log('No winner yet. Keep trying!');
+ }
+ }
+}
+
+// //changePlayer function
+function changePlayer () {
+
+    if (playerTurn % 2 === 1) {
+        player = 'X';
+        console.log('Player 1 make your move');
+    } else if (playerTurn % 2 === 0) {
+        player = 'O';
+        console.log('Player 2 make your move!');
+    }
+}
+
 // // init function
 // function init() {
 //     var title = document.createElement("TITLE");
@@ -184,30 +212,6 @@ function function8() {
 
 // }
 
-// //checkWinConditions function
-function checkWinConditions() {
-    if (
-    boardState[0]
-    && boardState[0] == boardState[1]
-    && boardState[1] == boardState[2]
- ) {
-    console.log('We have a winner!');
- } else {
-    console.log('No winner yet. Keep trying!');
- }
- }
-
-// //changePlayer function
-function changePlayer () {
-
-    if (playerTurn % 2 === 1) {
-        let player = 'X';
-        console.log('Player 1 make your move');
-    } else if (playerTurn % 2 === 0) {
-        let player = 'O';
-        console.log('Player 2 make your move!');
-    }
-}
 // //gameResult function
 // function gameResult() {
 
