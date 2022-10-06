@@ -5,23 +5,23 @@ console.log(player);
 
 //let state = {
 
-    let boardState = ['', '', '', '', '', '', '', '', ''];
-    console.log(boardState);
+let boardState = ['', '', '', '', '', '', '', '', ''];
+console.log(boardState);
 
-    let playerTurn = 1; 
-    console.log(playerTurn);
+let playerTurn = 1; 
+console.log(playerTurn);
 
-    let windConditions = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
-    ]
-//}
+let winConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+]
+
 
 //Variables
 
@@ -69,9 +69,7 @@ function function0() {
     if (player === 'X') {
     boardState.splice(0, 1, 'X');
     x0.innerHTML = 'X';
-    console.log('Player turn before', playerTurn);
     playerTurn = playerTurn + 1;
-    console.log('Player turn after', playerTurn);  
     } else if (player === 'O') {
         boardState.splice(0, 1, 'O');
         x0.innerHTML = 'O';
@@ -241,16 +239,19 @@ function function8() {
 
 // //checkWinConditions function
 function checkWinConditions() {
-    for (let i = 0; i < windConditions.length; i++) {
-        const line = windConditions[i];
+    for (let i = 0; i < winConditions.length; i++) {
+        let line = winConditions[i];
+        let space0 = line[0];
+        let space1 = line[1];
+        let space2 = line[2];
     if (
-    boardState[0]
-    && boardState[0] == boardState[1]
-    && boardState[1] == boardState[2]
+    boardState[space0]
+    && boardState[space0] == boardState[space1]
+    && boardState[space1] == boardState[space2]
  ) {
     console.log('We have a winner!');
  } else {
-    console.log('No winner yet. Keep trying!');
+    //console.log('No winner yet. Keep trying!');
  }
  }
 }
