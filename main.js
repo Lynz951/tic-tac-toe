@@ -22,16 +22,6 @@ let winConditions = [
     [2, 4, 6]
 ]
 
-const resetButton = document.getElementById("reset");
-
-//Reset button
-
-resetButton.type = 'button';
-resetButton.id = 'reset';
-resetButton.value = 'Reset';
-resetButton.className = 'btn';
-app.appendChild(reset);
-
 //Functions for buttons
 
 let x0 = document.getElementById("x0");
@@ -239,16 +229,16 @@ function checkWinConditions() {
         let space0 = line[0];
         let space1 = line[1];
         let space2 = line[2];
-    if (
-    boardState[space0]
-    && boardState[space0] == boardState[space1]
-    && boardState[space1] == boardState[space2]
- ) {
-    var winner = document.createElement("h1");
-    winner.id = 'winner';
-    winner.innerHTML = 'We have a winner!!';
-    document.body.appendChild(winner);
-    console.log('We have a winner!');
+            if (
+            boardState[space0]
+            && boardState[space0] == boardState[space1]
+            && boardState[space1] == boardState[space2]
+        ) {
+            var winner = document.createElement("h1");
+            winner.id = 'winner';
+            winner.innerHTML = 'We have a winner!!';
+            document.body.appendChild(winner);
+            console.log('We have a winner!');
  } else {
  }
  }
@@ -266,10 +256,32 @@ function changePlayer () {
     }
 }
 
-// //resetGame function
- function resetGame() {
-    //clear DOM
-    //make all spaces clear and clickable
+const resetButton = document.getElementById("reset");
 
+//Reset button
+
+resetButton.type = 'button';
+resetButton.id = 'reset';
+resetButton.value = 'Reset';
+resetButton.className = 'btn';
+app.appendChild(reset);
+
+
+//resetGame function
+
+ function resetGame() {
+   player = 'X';
+   boardState = ['', '', '', '', '', '', '', '', ''];
+   playerTurn = 1;
+   x0.innerHTML = '';
+   x1.innerHTML = '';
+   x2.innerHTML = '';
+   x3.innerHTML = '';
+   x4.innerHTML = '';
+   x5.innerHTML = '';
+   x6.innerHTML = '';
+   x7.innerHTML = '';
+   x8.innerHTML = '';
+   winner.innerHTML = '';
  }
 
