@@ -239,9 +239,9 @@ function checkWinConditions() {
             winner.innerHTML = 'We have a winner!!';
             document.body.appendChild(winner);
             console.log('We have a winner!');
- } else {
- }
- }
+        } else {
+    }
+    }
 }
 
 // //changePlayer function
@@ -256,10 +256,9 @@ function changePlayer () {
     }
 }
 
-const resetButton = document.getElementById("reset");
-
 //Reset button
 
+const resetButton = document.getElementById("reset");
 resetButton.type = 'button';
 resetButton.id = 'reset';
 resetButton.value = 'Reset';
