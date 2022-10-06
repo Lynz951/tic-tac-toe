@@ -262,7 +262,7 @@ const resetButton = document.getElementById("reset");
 resetButton.type = 'button';
 resetButton.id = 'reset';
 resetButton.value = 'Reset';
-resetButton.className = 'btn';
+resetButton.className = 'btn-lg';
 app.appendChild(reset);
 
 
