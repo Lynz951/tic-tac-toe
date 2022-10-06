@@ -26,9 +26,9 @@ let winConditions = [
 //Variables
 
 // var title = document.createElement("h1");
-// title.id = 'title'
-// title.innerHTML = 'Tic Tac Toe'
-// document.body.appendChild(title)
+// title.id = 'winner'
+// winner.innerHTML = 'We have a winner!!'
+// document.body.appendChild(winner)
 
 // const startButton = document.getElementById("start");
 const resetButton = document.getElementById("reset");
@@ -249,9 +249,12 @@ function checkWinConditions() {
     && boardState[space0] == boardState[space1]
     && boardState[space1] == boardState[space2]
  ) {
+    var winner = document.createElement("h1");
+    winner.id = 'winner';
+    winner.innerHTML = 'We have a winner!!';
+    document.body.appendChild(winner);
     console.log('We have a winner!');
  } else {
-    //console.log('No winner yet. Keep trying!');
  }
  }
 }
