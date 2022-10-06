@@ -9,11 +9,11 @@ console.log(boardState);
 let playerTurn = 1; 
 console.log(playerTurn);
 
-// var title = document.createElement("TITLE");
-// var t = document.createTextNode("Title");
-// title.appendChild(t);
+// var title = document.createElement("h1");
+// title.id = 'title'
+// title.innerHTML = 'Tic Tac Toe'
+// document.body.appendChild(title)
 
-// document.getElementById("app").innerHTML = "Tic-Tac-Toe";
 
 // const startButton = document.getElementById("start");
 const resetButton = document.getElementById("reset");
@@ -52,6 +52,93 @@ function function0() {
     }
 }
 
+function function1() {
+    console.log(player === 'X');
+    if (player === 'X') {
+    boardState.splice(1, 1, 'X');
+    playerTurn = playerTurn + 1;  
+    } else if (player === 'O') {
+        boardState.splice(1, 1, 'O');
+        playerTurn = playerTurn + 1;
+    }
+}
+
+function function2() {
+    console.log(player === 'X');
+    if (player === 'X') {
+    boardState.splice(2, 1, 'X');
+    playerTurn = playerTurn + 1;  
+    } else if (player === 'O') {
+        boardState.splice(2, 1, 'O');
+        playerTurn = playerTurn + 1;
+    }
+}
+
+function function3() {
+    console.log(player === 'X');
+    if (player === 'X') {
+    boardState.splice(3, 1, 'X');
+    playerTurn = playerTurn + 1;  
+    } else if (player === 'O') {
+        boardState.splice(3, 1, 'O');
+        playerTurn = playerTurn + 1;
+    }
+}
+
+function function4() {
+    console.log(player === 'X');
+    if (player === 'X') {
+    boardState.splice(4, 1, 'X');
+    playerTurn = playerTurn + 1;  
+    } else if (player === 'O') {
+        boardState.splice(4, 1, 'O');
+        playerTurn = playerTurn + 1;
+    }
+}
+
+function function5() {
+    console.log(player === 'X');
+    if (player === 'X') {
+    boardState.splice(5, 1, 'X');
+    playerTurn = playerTurn + 1;  
+    } else if (player === 'O') {
+        boardState.splice(5, 1, 'O');
+        playerTurn = playerTurn + 1;
+    }
+}
+
+function function6() {
+    console.log(player === 'X');
+    if (player === 'X') {
+    boardState.splice(6, 1, 'X');
+    playerTurn = playerTurn + 1;  
+    } else if (player === 'O') {
+        boardState.splice(6, 1, 'O');
+        playerTurn = playerTurn + 1;
+    }
+}
+
+function function7() {
+    console.log(player === 'X');
+    if (player === 'X') {
+    boardState.splice(7, 1, 'X');
+    playerTurn = playerTurn + 1;  
+    } else if (player === 'O') {
+        boardState.splice(7, 1, 'O');
+        playerTurn = playerTurn + 1;
+    }
+}
+
+function function8() {
+    console.log(player === 'X');
+    if (player === 'X') {
+    boardState.splice(8, 1, 'X');
+    playerTurn = playerTurn + 1;  
+    } else if (player === 'O') {
+        boardState.splice(8, 1, 'O');
+        playerTurn = playerTurn + 1;
+    }
+}
 
 // function function0() {
 //     if (boardState[0] = null) {
