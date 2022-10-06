@@ -1,19 +1,34 @@
 //document.body.onload = init;
 
-//Variables
+let state = {
 
-let player = 'X';
-console.log(player);
-let boardState = ['', '', '', '', '', '', '', '', ''];
-console.log(boardState);
-let playerTurn = 1; 
-console.log(playerTurn);
+    let player = 'X';
+    console.log(player);
+
+    let boardState = ['', '', '', '', '', '', '', '', ''];
+    console.log(boardState);
+
+    let playerTurn = 1; 
+    console.log(playerTurn);
+
+    let windConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ]
+}
+
+//Variables
 
 // var title = document.createElement("h1");
 // title.id = 'title'
 // title.innerHTML = 'Tic Tac Toe'
 // document.body.appendChild(title)
-
 
 // const startButton = document.getElementById("start");
 const resetButton = document.getElementById("reset");
@@ -140,13 +155,6 @@ function function8() {
     }
 }
 
-// function function0() {
-//     if (boardState[0] = null) {
-//         let boardState = boardState[0].splice('', 'X');
-//     } 
-//     return newBoardState;
-// }
-
 // // init function
 // function init() {
 //     var title = document.createElement("TITLE");
@@ -156,7 +164,7 @@ function function8() {
 //     document.getElementById("app").innerHTML = "Tic-Tac-Toe";
 // }
 
-// //drawBoard function
+// //drawBoard function - 
 // function drawBoard() {
 
 // }
@@ -177,18 +185,27 @@ function function8() {
 // }
 
 // //checkWinConditions function
-// function checkWinConditions() {
-
-// }
+function checkWinConditions() {
+    if (
+    boardState[0];
+    && boardState[0] == boardState[1];
+    && boardState[1] == boardState[2];
+ ) {
+    console.log('We have a winner!');
+ }
+ }
 
 // //changePlayer function
 function changePlayer () {
-    if (player === 'X') {
-        player = 'O';
-    } else if (player === 'O') {
-        player = 'X';
-    }      
-}
+
+    if (playerTurn % 2 ==== 1) {
+        let player = 'X';
+        console.log('Player 1 make your move');
+    } else if (playerTurn % 2 === 0) {
+        //let player = 'O';
+        console.log('Player 2 make your move!');
+    }
+
 // //gameResult function
 // function gameResult() {
 
@@ -206,7 +223,3 @@ function changePlayer () {
 
 // }
 
-// //makeMove function
-// function makeMove() {
-
-// }
