@@ -1,9 +1,9 @@
 //document.body.onload = init;
 
-let state = {
+let player = 'X';
+console.log(player);
 
-    let player = 'X';
-    console.log(player);
+//let state = {
 
     let boardState = ['', '', '', '', '', '', '', '', ''];
     console.log(boardState);
@@ -21,7 +21,7 @@ let state = {
         [0, 4, 8],
         [2, 4, 6]
     ]
-}
+//}
 
 //Variables
 
@@ -52,7 +52,7 @@ resetButton.value = 'Reset';
 resetButton.className = 'btn';
 app.appendChild(reset);
 
-resetButton.onclick = init;
+//resetButton.onclick = init;
 
 //Functions for buttons
 
@@ -187,9 +187,9 @@ function function8() {
 // //checkWinConditions function
 function checkWinConditions() {
     if (
-    boardState[0];
-    && boardState[0] == boardState[1];
-    && boardState[1] == boardState[2];
+    boardState[0]
+    && boardState[0] == boardState[1]
+    && boardState[1] == boardState[2]
  ) {
     console.log('We have a winner!');
  }
@@ -198,14 +198,14 @@ function checkWinConditions() {
 // //changePlayer function
 function changePlayer () {
 
-    if (playerTurn % 2 ==== 1) {
+    if (playerTurn % 2 === 1) {
         let player = 'X';
         console.log('Player 1 make your move');
     } else if (playerTurn % 2 === 0) {
         //let player = 'O';
         console.log('Player 2 make your move!');
     }
-
+}
 // //gameResult function
 // function gameResult() {
 
