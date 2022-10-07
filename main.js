@@ -1,18 +1,15 @@
-//document.body.onload = init;
 
 //Variables
 
 let player = 'X';
 console.log(player);
-
 let gameWinner = false;
-
-let boardState = ['', '', '', '', '', '', '', '', ''];
+let boardState =    ['', '', '',
+                     '', '', '', 
+                     '', '', ''];
 console.log(boardState);
-
 let playerTurn = 1; 
 console.log(playerTurn);
-
 let winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -23,6 +20,7 @@ let winConditions = [
     [0, 4, 8],
     [2, 4, 6]
 ]
+var feedback = document.getElementById("feedback");
 
 //Functions for buttons
 
@@ -266,7 +264,7 @@ function changePlayer () {
         var playerX = document.createElement("h6");
         playerX.id = 'playerX';
         playerX.innerHTML = 'Player X, make your move';
-        document.body.appendChild(playerX);
+        feedback.appendChild(playerX);
         console.log('Player 1 make your move');
     } else if (playerTurn % 2 === 0
         && gameWinner === false) {
@@ -274,7 +272,7 @@ function changePlayer () {
         var playerO = document.createElement("h6");
         playerO.id = 'player';
         playerO.innerHTML = 'Player O, make your move';
-        document.body.appendChild(playerO);
+        feedback.appendChild(playerO);
         console.log('Player 2 make your move!');
     }
 }
@@ -304,8 +302,7 @@ app.appendChild(reset);
    x6.innerHTML = '';
    x7.innerHTML = '';
    x8.innerHTML = '';
-   playerX = '';
-   playerO = '';
+   feedback.innerHTML = '';
    winner.innerHTML = '';
  }
 
