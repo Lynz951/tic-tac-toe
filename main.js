@@ -5,6 +5,8 @@
 let player = 'X';
 console.log(player);
 
+let gameWinner = false;
+
 let boardState = ['', '', '', '', '', '', '', '', ''];
 console.log(boardState);
 
@@ -234,6 +236,7 @@ function checkWinConditions() {
             && boardState[space0] == boardState[space1]
             && boardState[space1] == boardState[space2]
             && player == 'X') {
+            gameWinner = true;
             var winner = document.createElement("h2");
             winner.id = 'winner';
             winner.innerHTML = "We have a winner! <br><br>You're the best, Player X!";
@@ -244,6 +247,7 @@ function checkWinConditions() {
                 && boardState[space0] == boardState[space1]
                 && boardState[space1] == boardState[space2]
                 && player == 'O') {
+                gameWinner = true;
                 var winner = document.createElement("h2");
                 winner.id = 'winner';
                 winner.innerHTML = "We have a winner! <br><br>You go, Player O!";
@@ -256,11 +260,21 @@ function checkWinConditions() {
 // //changePlayer function
 function changePlayer () {
 
-    if (playerTurn % 2 === 1) {
+    if (playerTurn % 2 === 1
+        && gameWinner === false) {
         player = 'X';
+        var playerX = document.createElement("h6");
+        playerX.id = 'playerX';
+        playerX.innerHTML = 'Player X, make your move';
+        document.body.appendChild(playerX);
         console.log('Player 1 make your move');
-    } else if (playerTurn % 2 === 0) {
+    } else if (playerTurn % 2 === 0
+        && gameWinner === false) {
         player = 'O';
+        var playerO = document.createElement("h6");
+        playerO.id = 'player';
+        playerO.innerHTML = 'Player O, make your move';
+        document.body.appendChild(playerO);
         console.log('Player 2 make your move!');
     }
 }
@@ -290,6 +304,8 @@ app.appendChild(reset);
    x6.innerHTML = '';
    x7.innerHTML = '';
    x8.innerHTML = '';
+   playerX = '';
+   playerO = '';
    winner.innerHTML = '';
  }
 
