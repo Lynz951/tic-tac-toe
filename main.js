@@ -233,14 +233,23 @@ function checkWinConditions() {
             boardState[space0]
             && boardState[space0] == boardState[space1]
             && boardState[space1] == boardState[space2]
-        ) {
-            var winner = document.createElement("h1");
+            && player == 'X') {
+            var winner = document.createElement("h2");
             winner.id = 'winner';
-            winner.innerHTML = 'We have a winner!!';
+            winner.innerHTML = "We have a winner! <br><br>You're the best, Player X!";
             document.body.appendChild(winner);
-            console.log('We have a winner!');
-        } else {
-    }
+            console.log('We have a winner. Its Player 1!');
+            } else if (
+                boardState[space0]
+                && boardState[space0] == boardState[space1]
+                && boardState[space1] == boardState[space2]
+                && player == 'O') {
+                var winner = document.createElement("h2");
+                winner.id = 'winner';
+                winner.innerHTML = "We have a winner! <br><br>You go, Player O!";
+                document.body.appendChild(winner);
+                console.log('We have a winner! Its Player 2!');
+            }
     }
 }
 
